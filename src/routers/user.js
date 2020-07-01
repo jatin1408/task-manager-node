@@ -4,8 +4,8 @@ const auth = require('../middleware/auth')
 const router = new express.Router()
 const multer=require('multer')
 const sharp=require('sharp')
-const dot=require('dotenv')
-dot.config()
+
+
 const {sendWelcomeEmail,cancelEmail}=require('../mails/accounts')
 router.post('/users', async (req, res) => {
     const user = new User(req.body)

@@ -1,6 +1,5 @@
 const sgMail=require("@sendgrid/mail")
-const dot=require('dotenv')
-dot.config()
+
 
 sgMail.setApiKey(process.env.SENDGRID)
 const sendWelcomeEmail=(name,email)=>{
